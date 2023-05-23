@@ -20,7 +20,11 @@ body {
 
 header.item1 {
     grid-area: header;
-    height:100%
+    width:100%;
+    height: 400px;
+    background-image: url("images/header.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 main.item2 {
@@ -48,31 +52,81 @@ body {
     }
 }
 
+/* Your existing styles */
 nav.headmenu {
     display: flex;
     justify-content: flex-end;
-    margin-right:20px;
+    align-items: center;
+    margin-right: 20px;
+    position: relative;
 }
 
 nav.headmenu ul {
     list-style: none;
     margin: 0;
-    margin-left: 20px;
     padding: 0;
     display: flex;
+    align-items: center;
 }
 
 nav.headmenu li {
-    margin-right: 10px;
-    color:#FFFFFF
+    margin: 10px;
+    color: #FFFFFF;
 }
 
 nav.headmenu a {
-text-decoration: none;
-color: #ffffff;
-font-weight: bold;
-font-size: 18px;
-font-family: nexah;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: nexah;
+}
+
+/* New styles for the burger menu */
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #FFFFFF;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.toggle-input {
+    display: none;
+}
+
+.toggle-input:checked ~ .link-options {
+    display: block;
+}
+
+
+.link-options {
+    display: none;
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+    nav.headmenu {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    nav.headmenu ul {
+        display: none;
+        align-items: flex-start;
+    }
+
+    .burger-menu {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 600px) {
