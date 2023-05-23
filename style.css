@@ -13,11 +13,15 @@ body {
     'header header header header header header'
     'main main main main main main'
     'footer footer footer footer footer footer';
-    grid-gap: 10px;
     background-color: #000000;
     font-family: nexah;
     text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack the elements vertically */
+    letter-spacing: 0.1em;
 }
+
+
 
 header.item1 {
     grid-area: header;
@@ -84,7 +88,6 @@ nav.headmenu a {
 
 @media (max-width: 700px) {
     nav.headmenu {
-        flex-direction: column;
         align-items: flex-end;
     }
 
@@ -102,9 +105,7 @@ nav.headmenu a {
 
 main {
     grid-area: main;
-    background-color: #FFF;
-    flex-grow: 1; /* Ensure main takes up remaining vertical space */
-    overflow: auto; /* Add scrollable content when necessary */
+    background-color: #000;
 }
 
 .about-me {
@@ -113,14 +114,28 @@ main {
 }
 
 .content {
-    color: #C0355F;
+    color: #FFF;
     flex: 1; /* Take up remaining space */
 }
 
-.typewriter {
-    color: #000;
-    font-size: 18px;
-}
+  
+  .typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid;
+    width: 100%;
+    animation: typing 1s steps(30, end);
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes typing {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
 .about-me .image {
     flex: 1; /* Take up remaining space */
@@ -149,8 +164,9 @@ main {
   
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width:100%;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Adjust the column width as needed */
+    max-width: 1200px; /* Set a maximum width for the grid */
+    margin: 0 auto; /* Center the grid horizontally */
 }
   
 .column {
@@ -203,17 +219,18 @@ main {
     }
 }
 
-.footer-content {
-    font-size: 16px;
-    color: #ffffff;
-}
 
 footer.item3 {
     left: 0;
     bottom: 0;
     width: 100%;
+    height: 100px;
     background-color: #000;
     color: #ffffff;
     font-size: 16px;
-    padding: 20px; /* Add padding to the footer */
+    padding: 20px 0; /* Add padding to the top and bottom of the footer */
+    display: flex; /* Add flex properties */
+    justify-content: center; /* Center align the content horizontally */
+    align-items: center; /* Center align the content vertically */
+    text-align: center;
   }
