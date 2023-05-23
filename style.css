@@ -17,23 +17,6 @@ body {
     background-color: #000000;
 }
 
-header.item1 {
-    grid-area: header;
-    width:100%;
-    height: 400px;
-    background-image: url("images/header.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-main.item2 {
-    grid-area: main;
-}
-
-footer.item3 {
-    grid-area: footer;
-}
-
 body > * {
     background-color:#031740;
     text-align: center;
@@ -51,12 +34,16 @@ body {
     }
 }
 
-/* Your existing styles */
+header.item1 {
+    grid-area: header;
+    width:100%;
+    height: 50px;
+}
+
 nav.headmenu {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    margin-right: 20px;
     position: relative;
 }
 
@@ -81,7 +68,6 @@ nav.headmenu a {
     font-family: nexah;
 }
 
-/* New styles for the burger menu */
 .burger-menu {
     display: none;
     cursor: pointer;
@@ -111,7 +97,6 @@ nav.headmenu a {
     display: none;
 }
 
-/* Media query for small screens */
 @media (max-width: 600px) {
     nav.headmenu {
         flex-direction: column;
@@ -144,4 +129,12 @@ nav.headmenu a {
 	body {
 		background-color: #ffffff;
 	}
+}
+
+main.item2 {
+    grid-area: main;
+}
+
+footer.item3 {
+    grid-area: footer;
 }
