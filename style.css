@@ -10,9 +10,9 @@ body {
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: auto auto auto;
     grid-template-areas:
-    'header header header header header header'
-    'main main main main main main'
-    'footer footer footer footer footer footer';
+    'header'
+    'main'
+    'footer';
     background-color: #000000;
     font-family: nexah;
     text-align: center;
@@ -125,36 +125,13 @@ main .forside {
 }
 
   
-.typewriter {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    animation: 
-      typing 6s steps(60, end),
-      blink-caret 1s step-end infinite;
-  }
-  
-/* The typing effect */
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
+.portfolioimg {
+    width: 40%;
+}
 
-  .typewriter2 {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    animation: 
-      typing 6s steps(60, end),
-      blink-caret 1s step-end infinite;
-    animation-delay: 1s;
-  }
-  
-/* The typing effect */
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
+.mig {
+    width:20%;
+}
 
 .om-mig .image {
     flex: 1; /* Take up remaining space */
