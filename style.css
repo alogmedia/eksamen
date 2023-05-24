@@ -103,46 +103,65 @@ nav.headmenu a {
     }
 }
 
-main {
+main .forside {
     grid-area: main;
     background-color: #000;
 }
 
-.about-me {
+.maincontent {
+    grid-area: main;
+    background-color: #FFF;
+    color: #000;
+}
+
+.om-mig {
     display: flex;
     margin-bottom: 10px;
 }
 
 .content {
-    color: #FFF;
+    color: #000;
     flex: 1; /* Take up remaining space */
 }
 
   
-  .typewriter {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 2px solid;
-    width: 100%;
-    animation: typing 1s steps(30, end);
-    animation-fill-mode: forwards;
+.typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: 
+      typing 6s steps(60, end),
+      blink-caret 1s step-end infinite;
   }
   
-  @keyframes typing {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
   }
 
-.about-me .image {
+  .typewriter2 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: 
+      typing 6s steps(60, end),
+      blink-caret 1s step-end infinite;
+    animation-delay: 1s;
+  }
+  
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+.om-mig .image {
     flex: 1; /* Take up remaining space */
 }
   
   
-.about-me .image img {
+.om-mig .image img {
     width: 300px;
     animation: image-fade-in 1s ease-in 0.1s;
 }
