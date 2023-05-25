@@ -13,7 +13,7 @@ body {
     'header'
     'main'
     'footer';
-    background-color: #000000;
+    background-color: #171716;
     font-family: nexah;
     text-align: center;
     display: flex;
@@ -105,13 +105,13 @@ nav.headmenu a {
 
 main .forside {
     grid-area: main;
-    background-color: #000;
+    background-color: #171716;
 }
 
 .maincontent {
     grid-area: main;
     background-color: #FFF;
-    color: #000;
+    color: #171716;
 }
 
 .om-mig {
@@ -120,7 +120,7 @@ main .forside {
 }
 
 .content {
-    color: #000;
+    color: #171716;
     flex: 1; /* Take up remaining space */
 }
 
@@ -200,7 +200,7 @@ main .forside {
     opacity: 0;
   }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
     .column .overlay {
         opacity: 0;
     }
@@ -221,7 +221,6 @@ footer.item3 {
     bottom: 0;
     width: 100%;
     height: 100px;
-    background-color: #000;
     color: #ffffff;
     font-size: 16px;
     padding: 20px 0; /* Add padding to the top and bottom of the footer */
