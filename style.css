@@ -30,7 +30,6 @@ header.item1 {
 }
 
 nav.headmenu {
-    display: flex;
     justify-content: flex-start;
     align-items: center;
     position: relative;
@@ -71,33 +70,30 @@ nav.headmenu a {
     height: 3px;
     background-color: #FFFFFF;
     margin-bottom: 5px;
-    transition: transform 0.3s ease-in-out;
 }
 
 .toggle-input {
     display: none;
 }
 
-.toggle-input:checked ~ .link-options {
+.toggle-input:checked ~ .burger-links {
     display: block;
 }
 
-
-.link-options {
+.burger-links {
     display: none;
 }
 
 @media (max-width: 700px) {
     nav.headmenu {
         align-items: flex-start;
-        background-color:black;
+        background-color: #171716;
         width:200px;
         margin-left:10px;
     }
 
     nav.headmenu ul {
         display: none;
-        align-items: flex-start;
     }
 
     .burger-menu {
@@ -117,46 +113,14 @@ main .forside {
     background-color: #FFF;
     color: #171716;
 }
-
-.om-mig {
-    display: flex;
-    margin-bottom: 10px;
-}
-
-.content {
-    color: #171716;
-    flex: 1; /* Bruger det resterende plads */
-}
-
   
 .portfolioimg {
     width: 40%;
 }
 
 .mig {
-    width:20%;
-}
-
-.om-mig .image {
-    flex: 1;
-}
-  
-  
-.om-mig .image img {
-    width: 300px;
-    animation: image-fade-in 1s ease-in 0.1s;
-}
-  
-@keyframes image-fade-in {
-    from {
-      opacity: 0;
-      transform: translateX(-100px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-}
+    width:25%;
+} /*Forbedring */
 
 .projects h2 {
     margin-bottom: 20px;
@@ -164,9 +128,9 @@ main .forside {
   
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Adjust the column width as needed */
-    max-width: 1100px; /* Set a maximum width for the grid */
-    margin: 0 auto; /* Center the grid horizontally */
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); 
+    max-width: 1100px; 
+    margin: 0 auto;
 }
   
 .column {
@@ -209,18 +173,12 @@ main .forside {
         opacity: 0;
     }
     .column h3 {
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-        color: #000;
-        margin:0;
-        font-size: 20px;
-        z-index: 1;
+        color: #171716;
     }
 }
 
 
-footer.item3 {
+footer {
     left: 0;
     bottom: 0;
     width: 100%;
@@ -228,8 +186,5 @@ footer.item3 {
     color: #ffffff;
     font-size: 16px;
     padding: 20px 0; 
-    display: flex; 
     justify-content: center;
-    align-items: center;
-    text-align: center;
   }
