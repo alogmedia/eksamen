@@ -169,7 +169,7 @@ main .forside {
   opacity: 0;
 }
 
-.form-group {
+.formgruppe {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -209,7 +209,7 @@ border-color: #3498db;
   cursor: pointer;
 }
     
-button:hover {
+.send:hover {
   background-color: #FFF;
   color:#171716;
   border: 1px solid #171716;
